@@ -1,0 +1,26 @@
+//ABSTRACTS
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+//BASE
+@import './base/animation';
+@import './base/base';
+@import './base/typography';
+@import './base/utilities';
+
+//COMPONENTS
+
+//LAYOUT
+@import './layout/footer';
+@import './layout/grid';
+@import './layout/header';
+
+//PAGES
+@import './pages/landingPage';
+@import './pages/login';
+@import './pages/registration';
+
+//THEMES
+
+//VENDORS
+@import './vendors/_bootstrap';

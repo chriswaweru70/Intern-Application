@@ -7,26 +7,21 @@
 		<router-view />
 	</div>
 </template>
-
-<style lang="scss">
-#app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
-	color: #2c3e50;
+<style>
+/* background image for register page to be corrected later */
+.register-container {
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(248, 84, 87, 0.8),
+		rgba(114, 62, 151, 0.8)
+	);
 }
 
-#nav {
-	padding: 30px;
-
-	a {
-		font-weight: bold;
-		color: #2c3e50;
-
-		&.router-link-exact-active {
-			color: #42b983;
-		}
-	}
+.register {
+	background-image: url('../public/img/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	border-radius: 3px;
+	box-shadow: 0 4.5rem 1rem rgba(#000, 0.6);
 }
 </style>
