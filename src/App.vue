@@ -7,21 +7,44 @@
 		<router-view />
 	</div>
 </template>
-<style>
+<style lang=scss>
 /* background image for register page to be corrected later */
-.register-container {
-	background-image: linear-gradient(
-		to right bottom,
-		rgba(248, 84, 87, 0.8),
-		rgba(114, 62, 151, 0.8)
-	);
-}
 
 .register {
-	background-image: url('../public/img/bg.jpg');
+	background-image: linear-gradient(
+			96deg,
+			rgba(#fff, 0.9) 50%,
+			rgba(#fff, 0.9) 50%,
+			transparent 50%
+		),
+		url('../public/img/tim-van-der-kuip-CPs2X8JYmS8-unsplash.jpg');
 	background-size: cover;
 	background-position: center;
-	border-radius: 3px;
-	box-shadow: 0 4.5rem 1rem rgba(#000, 0.6);
+	height: 50rem;
+	border-radius: 7px;
+	width: 70rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.login {
+	background-image: linear-gradient(
+			96deg,
+			rgba(#fff, 0.9) 50%,
+			rgba(#fff, 0.9) 50%,
+			transparent 50%
+		),
+		url('../public/img/brooke-cagle-NoRsyXmHGpI-unsplash.jpg');
+	background-size: cover;
+	background-position: left;
+	height: 50rem;
+	border-radius: 7px;
+	width: 70rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 </style>
