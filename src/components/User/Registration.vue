@@ -6,7 +6,7 @@
 					<div class="register__form">
 						<h4 class="heading-main">Register</h4>
 						<p class="heading-sub-main">Its completely free.</p>
-						<form action="#" class="form">
+						<form action="#" class="form" @submit.prevent="onSignup">
 							<div class="form__group">
 								<input v-model="name" type="text" class="form__input" placeholder="Full Name" required />
 							</div>
@@ -31,6 +31,7 @@
 									type="password"
 									class="form__input"
 									placeholder="Confirm Password"
+									:rules="[comparePasswords]"
 									required
 								/>
 							</div>
@@ -57,6 +58,25 @@ export default {
 			email: '',
 			password: '',
 			confirmPassword: ''
+		}
+	},
+	methods: {
+		onSignup() {
+			console.log({
+				name: this.name,
+				username: this.username,
+				email: this.email,
+				password: this.password,
+				confirmPassword: this.confirmPassword
+			})
+		}
+	},
+	computed: {
+		comparePasswords() {
+			return this.password === this.confirmPassword
+				? 'Passwords are a match'
+				: 'Passwords do not match'
+			console.log(true)
 		}
 	}
 }
