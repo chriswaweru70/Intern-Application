@@ -8,17 +8,39 @@
 						<p class="heading-sub-main">Its completely free.</p>
 						<form action="#" class="form" @submit.prevent="onSignup">
 							<div class="form__group">
-								<input v-model="name" type="text" class="form__input" placeholder="Full Name" required />
+								<input
+									v-model="name"
+									id="name"
+									type="text"
+									class="form__input"
+									placeholder="Full Name"
+									required
+								/>
 							</div>
 							<div class="form__group">
-								<input v-model="username" type="text" class="form__input" placeholder="UserName" required />
+								<input
+									v-model="username"
+									id="username"
+									type="text"
+									class="form__input"
+									placeholder="UserName"
+									required
+								/>
 							</div>
 							<div class="form__group">
-								<input v-model="email" type="email" class="form__input" placeholder="Email" required />
+								<input
+									v-model="email"
+									id="email"
+									type="email"
+									class="form__input"
+									placeholder="Email"
+									required
+								/>
 							</div>
 							<div class="form__group">
 								<input
 									v-model="password"
+									id="password"
 									type="password"
 									class="form__input"
 									placeholder="Password"
@@ -28,12 +50,13 @@
 							<div class="form__group">
 								<input
 									v-model="confirmPassword"
+									id="confirmPassword"
 									type="password"
 									class="form__input"
 									placeholder="Confirm Password"
-									:rules="[comparePasswords]"
 									required
 								/>
+								<p class="error">{{comparePasswords}}</p>
 							</div>
 							<div class="form__group">
 								<button href="#" class="btn btn--submit">
@@ -73,9 +96,9 @@ export default {
 	},
 	computed: {
 		comparePasswords() {
-			return this.password === this.confirmPassword
-				? 'Passwords are a match'
-				: 'Passwords do not match'
+			return this.password !== this.confirmPassword
+				? 'Passwords do not match'
+				: ''
 			console.log(true)
 		}
 	}
