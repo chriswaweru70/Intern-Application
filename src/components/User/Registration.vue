@@ -8,25 +8,37 @@
 						<p class="heading-sub-main">Its completely free.</p>
 						<form action="#" class="form">
 							<div class="form__group">
-								<input type="text" class="form__input" placeholder="Full Name" id="name" required />
+								<input v-model="name" type="text" class="form__input" placeholder="Full Name" required />
 							</div>
 							<div class="form__group">
-								<input type="text" class="form__input" placeholder="UserName" id="user-name" required />
+								<input v-model="username" type="text" class="form__input" placeholder="UserName" required />
 							</div>
 							<div class="form__group">
-								<input type="email" class="form__input" placeholder="Email" id="email" required />
-							</div>
-							<div class="form__group">
-								<input type="password" class="form__input" placeholder="Password" id="password" required />
+								<input v-model="email" type="email" class="form__input" placeholder="Email" required />
 							</div>
 							<div class="form__group">
 								<input
+									v-model="password"
+									type="password"
+									class="form__input"
+									placeholder="Password"
+									required
+								/>
+							</div>
+							<div class="form__group">
+								<input
+									v-model="confirmPassword"
 									type="password"
 									class="form__input"
 									placeholder="Confirm Password"
-									id="c-password"
 									required
 								/>
+							</div>
+							<div class="form__group">
+								<button href="#" class="btn btn--submit">
+									Submit
+									&rarr;
+								</button>
 							</div>
 						</form>
 					</div>
@@ -37,7 +49,17 @@
 </template>
 
 <script>
-export default {}
+export default {
+	data() {
+		return {
+			name: '',
+			username: '',
+			email: '',
+			password: '',
+			confirmPassword: ''
+		}
+	}
+}
 </script>
 <styles scoped lang="scss">
 

@@ -12,6 +12,10 @@
 							<div class="form__group">
 								<input type="password" class="form__input" placeholder="Password" id="password" required />
 							</div>
+							<button href="#" class="btn btn--submit">
+								Submit
+								&rarr;
+							</button>
 						</form>
 					</div>
 				</div>
