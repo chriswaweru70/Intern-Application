@@ -6,7 +6,7 @@
 					<div class="register__form">
 						<h4 class="heading-main">Register</h4>
 						<p class="heading-sub-main">Its completely free.</p>
-						<form action="#" class="form" @submit.prevent="onSignup">
+						<form action="#" class="form" @submit.prevent="registerUser">
 							<div class="form__group">
 								<input
 									v-model="name"
@@ -83,14 +83,13 @@ export default {
 			confirmPassword: ''
 		}
 	},
+	created: function() {},
+
 	methods: {
-		onSignup() {
-			console.log({
-				name: this.name,
-				username: this.username,
+		registerUser() {
+			this.$store.dispatch('onSignup', {
 				email: this.email,
-				password: this.password,
-				confirmPassword: this.confirmPassword
+				password: this.password
 			})
 		}
 	},
@@ -100,8 +99,12 @@ export default {
 				? 'Passwords do not match'
 				: ''
 			console.log(true)
+		},
+		user() {
+			return this.$store.getters.user
 		}
-	}
+	},
+	watch: {}
 }
 </script>
 <styles scoped lang="scss">
